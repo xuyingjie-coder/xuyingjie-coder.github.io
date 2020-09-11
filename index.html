@@ -150,6 +150,104 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/11/%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="XuYingJie">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XuYingJie's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/11/%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">用hexo搭建个人博客</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-09-11 17:50:00 / 修改时间：17:51:00" itemprop="dateCreated datePublished" datetime="2020-09-11T17:50:00+08:00">2020-09-11</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p>Windows环境下如何用hexo搭建个人博客？</p>
+</blockquote>
+<h1 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h1><ol>
+<li>准备好github账号，创建好仓库。<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/demo/demo.github.io.git">https://github.com/demo/demo.github.io.git</a><br>注意 demo 的位置，名字必须一样，否则部署不成功</p>
+</blockquote>
+</li>
+<li>准备好git环境和node环境，直接官网下载安装即可。</li>
+</ol>
+<h1 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h1><blockquote>
+<p>注：如果是在Windows命令窗口下执行命令需要加 npx，如果是idea下，不需要加。npx 想要解决的主要问题，就是调用项目内部安装的模块</p>
+</blockquote>
+<ol>
+<li>本地创建一个文件夹，切换目录到新创建的文件夹。以 D:\develop\demo.github.io 为例，要与github仓库名一致</li>
+<li>执行 npm install hexo-cli -g，这一步是安装hexo</li>
+<li>执行命令 hexo init<blockquote>
+<p>如果是在Windows命令窗口下执行命令为：npx hexo init，下同</p>
+</blockquote>
+</li>
+<li>本地启动：hexo server 或者 hexo s<blockquote>
+<p>如果是在Windows命令窗口下执行命令为：npx hexo server<br><img src="https://img-blog.csdnimg.cn/20200911174042695.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTU2MDQx,size_16,color_FFFFFF,t_70#pic_center" alt="启动命令"></p>
+</blockquote>
+</li>
+</ol>
+<ol start="5">
+<li>本地打开：<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a><br><img src="https://img-blog.csdnimg.cn/20200911174043563.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTU2MDQx,size_16,color_FFFFFF,t_70#pic_center" alt="启动画面"></li>
+</ol>
+<h1 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h1><p>给hexo安装git插件： npm install hexo-deployer-git</p>
+<blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200911174042712.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTU2MDQx,size_16,color_FFFFFF,t_70#pic_center" alt="安装git插件"></p>
+</blockquote>
+<p>安装并配置admin插件：npm install –save hexo-admin</p>
+<blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200911174427308.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1OTU2MDQx,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+</blockquote>
+<p>下载Next主题：git clone <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a> themes/next<br>注意有 <a target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">https://github.com/iissnan/hexo-theme-next</a> 这个地址的主题不再维护，如果使用会有问题，所以避坑。问题如下：</p>
+<blockquote>
+<p><img src="https://img-blog.csdnimg.cn/20200911174042708.png#pic_center" alt="启动错误"></p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/10/%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -353,7 +451,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
